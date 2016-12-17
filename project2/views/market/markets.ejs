@@ -1,0 +1,26 @@
+<html>
+<head>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a> \
+        <a class="breadcrumb-item" href="/home/all">User Select</a> \ Markets
+    </nav>
+
+    <title>Markets</title>
+    <h3>Markets</h3>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+
+    <!--<input type="text" id="search" onkeyup="searchFunction()" placeholder="search for name"-->
+    <table>
+        <tr><th>Market</th><th>Abbreviation</th></tr>
+        <% for(var i = 0; i < result.length; i++) { %>
+        <tr>
+            <td><a href="/market/market/?Id=<%= result[i].Id%>"/> <%= result[i].Name %></td>
+            <td><%= result[i].Abbrv %></td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>

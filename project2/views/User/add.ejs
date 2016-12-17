@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Add User</title>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a> \
+        <a class="breadcrumb-item" href="/home/all">User Select</a> \ Add User
+    </nav>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h2>Please Sign Up <small>or you won't have stocks on stocks on stocks</small></h2>
+
+<div class="row">
+    <divi class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form role="form" action="/User/insert" >
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="FirstName" id="FirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="LastName" id="LastName" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Username" id="Username" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+            </div>
+            <div class="form-group">
+                <input type="email" name="Email" id="Email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input type="password" name="Pass" id="Pass" class="form-control input-lg" placeholder="Password" tabindex="5">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="colorgraph">
+            <div class="row">
+                <div class="col-xs-12 col-md-6"><input type="submit" value="AddUser" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+            </div>
+        </form>
+    </divi>
+</div>
+<!-- Modal -->
+
+</div>
+</body>
+</html>

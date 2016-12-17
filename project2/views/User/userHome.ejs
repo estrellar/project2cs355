@@ -1,0 +1,22 @@
+<html>
+<head>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a> \
+        <a class="breadcrumb-item" href="/home/all">User Select</a> \ Add User
+    </nav>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h3>Welcome, <%= result[0].Username %> </h3>
+<br/>
+<br/>
+<input type="button" value="My History" onclick="event.preventDefault();window.location.href='/User/history/?Username=<%=result[0].Username%>'"/>
+<br/>
+<br/>
+
+<input type="button" value="Markets" onclick="event.preventDefault();window.location.href='/market/markets'"/>
+
+
+</body>
+</html>

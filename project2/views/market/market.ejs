@@ -1,0 +1,32 @@
+<html>
+<head>
+    <%if(result.length > 0){%>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a> \
+        <a class="breadcrumb-item" href="/home/all">User Select</a> \
+        <a class="breadcrumb-item" href="/market/markets">Markets </a> \ <%=result[0].market%>
+
+    </nav>
+    <title><%=result[0].market%></title>
+
+    <h1><%=result[0].market%></h1>
+    <%}%>
+    <%if(result.length == 0){%>
+    <h1 style="color: #f44242;" > No results!!!!!!  </h1>
+    <%}%>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<table>
+    <tr><th>Company</th><th>Stock</th><th>Price</th><th>Date</th></tr>
+    <% for(var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].company %></td>
+        <td><%= result[i].stock %></td>
+        <td><%= result[i].price %></td>
+        <td><%= result[i].Date %></td>
+    </tr>
+    <%}%>
+</table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a> \ Select User
+    </nav>
+    <title> User Select </title>
+</head>
+<body>
+<h1>User Select</h1>
+<div> <input type="button" value="Add a User" onclick="event.preventDefault();window.location.href='/User/add'"/></div>
+<form action="/User/" method="get">
+    <br/>
+    <br/>
+    Please select a user: <select id="Username" name ="Username">
+        <% for(var i = 0; result.length > i; i++) { %>
+        <option value="<%= result[i].Username%>"> <%= result[i].Username + '= ' + result[i].FirstName + ', ' + result[i].LastName %></option>
+        <% } %>
+    </select>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

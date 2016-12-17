@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <title>Buy Stocks <%= currUser %></title>
+
+</head>
+<body>
+<table>
+    <form action='/User/transact/?Username=<%=currUser%>' >
+        Select Stock: <select id="StockId" name="StockId" onchange="changeQty(this.selectedIndex)">
+            <% for(var i = 0; result.length > i; i++) { %>
+            <option value="<%= result[i].Sid%>"> <%= result[i].SName %></option>
+            <% } %>
+        </select>
+        <br/>
+        Amount: <input type="number" id="Qty" name="Qty"/>
+        <br/>
+        <br/>
+        <input type="hidden" id="UName" name="UName" value="<%=currUser%>" />
+        <br/>
+        <input type="submit"/>
+    </form>
+</table>
+
+</body>
+</html>

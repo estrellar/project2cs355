@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>History</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+<a href="/User/buy/?Username=<%= currUser %>">Buy Stocks </a> <br/>
+<br/>
+
+<a href="/User/sell/?Username=<%= currUser %>">Sell Stocks</a><br/>
+<br/>
+
+<table>
+    <tr><th>Buyer</th><th>Seller</th><th>Stock</th><th>Purchase Price</th><th>Quantity</th></tr>
+    <% for(var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].bLName + ', ' + result[i].bFName %></td>
+        <td><%= result[i].sLName + ', ' + result[i].sFName %></td>
+        <td><%= result[i].Name %></td>
+        <td><%= result[i].PricePer%></td>
+        <td><%= result[i].Qty%></td>
+    </tr>
+    <% } %>
+</table>
+</body>
+</html>
